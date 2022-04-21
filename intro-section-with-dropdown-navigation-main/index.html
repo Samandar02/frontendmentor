@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<script>
+  function toggle(id) {
+    if (id == 1) {
+      if (document.getElementById("arrow1").getAttribute("src").includes("down")) {
+        document.getElementById("arrow1").setAttribute("src", "./images/icon-arrow-up.svg");
+        document.getElementsByClassName("closed-dropdown")[0].setAttribute("class", "opened-dropdown")
+      }
+      else {
+        document.getElementsByClassName("opened-dropdown")[0].setAttribute("class", "closed-dropdown")
+        document.getElementById("arrow1").setAttribute("src", "./images/icon-arrow-down.svg");
+      }
+    }
+    else {
+      if (document.getElementById("arrow2").getAttribute("src").includes("down")) {
+        document.getElementById("arrow2").setAttribute("src", "./images/icon-arrow-up.svg");
+        document.getElementsByClassName("closed-dropdown")[1].setAttribute("class", "opened-dropdown1")
+      }
+      else {
+        document.getElementsByClassName("opened-dropdown1")[0].setAttribute("class", "closed-dropdown")
+        document.getElementById("arrow2").setAttribute("src", "./images/icon-arrow-down.svg");
+      }
+    }
+  }
+</script>
+
+<body>
+  <div class="navigation">
+    <ul class="nav-brand">
+      <li><a href="">snap</a></li>
+    </ul>
+    <span class="hidden">
+    <ul class="nav-menu">
+      <li class="menu-item">
+        <a class="clickble" onclick="toggle(1)">Features<span><img id="arrow1" src="./images/icon-arrow-down.svg"
+              alt=""></span>
+
+        </a>
+        <div class="closed-dropdown">
+          <div class="d-item"><span><img src="./images/icon-todo.svg" alt=""></span> To Do List</div>
+          <div class="d-item"><span><img src="./images/icon-calendar.svg" alt=""></span>Calendar</div>
+          <div class="d-item"><span><img src="./images/icon-reminders.svg" alt=""></span>Reminders</div>
+          <div class="d-item"><span><img src="./images/icon-planning.svg" alt=""></span>Planing</div>
+        </div>
+      </li>
+      <li class="menu-item">
+        <a onclick="toggle(2)" class="clickble">Company <span><img id="arrow2" src="./images/icon-arrow-down.svg"
+              alt=""></span></a>
+        <div class="closed-dropdown">
+          <div class="d-item">History</div>
+          <div class="d-item">Our team</div>
+          <div class="d-item">Blog</div>
+        </div>
+      </li>
+      <li class="menu-item"><a class="clickble" href="">Careers</a></li>
+      <li class="menu-item"><a class="clickble" href="">About</a></li>
+    </ul>
+  </span>
+  <span>
+    <div class="mobile-nav">
+      <ul>
+        <li><a href="">aaa</a></li>
+        <li><a href="">aaa</a></li>
+        <li><a href="">aaa</a></li>
+        <li><a href="">aaa</a></li>
+      </ul>
+    </div>
+  </span>
+    <ul class="nav-register">
+      <li class="register-item"><a class="clickble" href="">Login</a></li>
+      <li class="register-item"><a class="clickble btn btn-outline" href="">Register</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Make remote work</h1>
+          <p>Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.</p>
+          <a class="btn btn-dark">Learn more</a>
+
+          <div class="partners">
+            <span class="partner-item"><img src="./images/client-databiz.svg" alt=""></span>
+            <span class="partner-item"><img src="./images/client-audiophile.svg" alt=""></span>
+            <span class="partner-item"><img src="./images/client-meet.svg" alt=""></span>
+            <span class="partner-item"><img src="./images/client-maker.svg" alt=""></span>
+
+          </div>
+        </div>
+      </div>
+      <div class="wlapper">
+        <!-- <img src="./images/image-hero-desktop.png" alt="img_hero_desktop"> -->
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>

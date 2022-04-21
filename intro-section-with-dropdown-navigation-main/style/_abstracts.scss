@@ -1,0 +1,17 @@
+$almostWhite: hsl(0, 0%, 98%);
+$mediumGray: hsl(0, 0%, 41%);
+$almostBlack: hsl(0, 0%, 8%);
+
+
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == p {
+ 
+         @media (max-width: 1438px) { @content };
+ 
+    }
+ }

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+body{
+    background-color: $almostWhite;
+}
+html{
+    width: 100vw;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Epilogue";
+    font-size: 18px;
+    box-sizing: border-box;
+}
+a{
+    color: $almostBlack;
+    text-decoration: none;
+    
+}
+.btn{
+    cursor: pointer;
+    padding: 10px 24px;
+    width: 151px;
+    height: 48px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    &.btn-outline{
+        border: 2px solid $mediumGray;
+        border-radius: 12px;
+        transition: all .3s;
+        &:hover{
+            border: 2px solid $almostBlack;
+
+        }
+    }
+    &.btn-dark{
+        border-radius: 12px;
+        background-color: $almostBlack;
+        color: $almostWhite;
+        transition: all .3s;
+        @include responsive(p){
+            margin: auto;
+        }
+        &:hover{
+            display: flex;
+            flex-wrap: nowrap;
+            border: 1px solid $almostBlack;
+            background-color: transparent;
+            color: $almostBlack;
+        }
+    }
+    
+} 

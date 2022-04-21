@@ -1,0 +1,171 @@
+.navigation{
+    user-select: none;
+    .clickble{
+        color: $mediumGray;
+        cursor: pointer;
+        &:hover{
+          color: $almostBlack;
+        }
+    }
+    padding: 24px 36px;
+    ul{
+        display: inline-block;
+        li{
+            display: inline-block;
+        }
+    }
+    .nav-brand{
+        padding: 0 48px 0 0;
+        font-weight: 700;
+        a{
+            font-size: xx-large;
+        }
+    }
+    .nav-menu{
+        .menu-item{
+            padding-right: 36px;
+        }
+    }
+    .nav-register{
+        float: right;
+        .register-item{
+            margin-left: 16px;
+        }
+    }
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+.container{
+    padding: 10px 160px;
+    @include responsive(p){
+        padding: 0;
+    }
+
+}
+.hero{
+    margin: 72px 0 0 0;
+    @include responsive(p){
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+}
+.hero-content{
+    padding: 10px;
+    margin: 10px 10px 10px 20px;
+    @include responsive(p){
+        padding: 0;
+        margin: 0;
+    }
+    h1{
+        font-size: 64px;
+        @include responsive(p){
+            margin: auto;
+            margin-top: 60px;
+            font-size: 32px;
+            width: 60%;
+            text-align: center;
+        }
+        width: 408px;
+        margin: 0;
+        font-weight: 700;
+    }
+    p{
+        margin: 48px 0;
+        width: 426px;
+        color: $mediumGray;
+        line-height: 24px;
+        @include responsive(p){
+           padding: 24px 0;
+           text-align: center;
+           font-size: x-large;
+           width: 60%;
+           line-height: 35px;
+           margin:auto;
+        }
+    }
+    .partners{
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .partner-item{
+            margin: 10px;
+
+        }
+    }
+}
+.header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @include responsive(p){
+        flex-direction: column-reverse;
+    }
+    .wlapper{
+        div{
+            background-image:url("../images/image-hero-desktop.png");
+            margin-top: 20px;
+            width: 430px;
+            height: 570px;
+            background-size: cover;
+            @include responsive(p){
+                background-image:url("../images/image-hero-mobile.png");
+                width: 100%;
+                background-size: cover;
+            }
+        }
+    }
+}
+.closed-dropdown{
+    display: none;
+}
+.opened-dropdown{
+    color: $almostBlack;
+    display: block;
+    position: fixed;
+    padding: 18px 12px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0 88px lighten($mediumGray,30px);
+    top: 68px;
+    left: 148px;
+    z-index: 12;
+    .d-item{
+        padding: 5px 0;
+        span{
+            padding: 10px;
+        }
+    }
+}
+.opened-dropdown1{
+    color: $almostBlack;
+    display: block;
+    position: fixed;
+    padding: 18px 12px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0 88px lighten($mediumGray,30px);
+    top: 68px;
+    left: 278px;
+    z-index: 12;
+    .d-item{
+        padding: 5px 0;
+    }
+}
+.hidden{
+    display: block;
+    @include responsive(p){
+        display: none;
+    }
+
+}
+.mobile-nav{
+    display: none;
+    @include responsive(p){
+        display: block;
+    }
+}
