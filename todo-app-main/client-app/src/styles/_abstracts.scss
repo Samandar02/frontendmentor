@@ -1,0 +1,31 @@
+@mixin responsive($type){
+    @if($type == m){
+        @media (max-width:767px) {@content}
+    };
+    // @if($type == d){
+    //     @media (min-width:768px) {@content}
+    // }
+};
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+$brightBlue: hsl(220, 98%, 61%);
+$checkBackground: linear-gradient( hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+
+// ### Netural Colors
+$veryDarkGrayishBlue: hsl(235, 19%, 35%);
+$lightGrayishBlue: hsl(236, 33%, 92%);
+$darkGrayishBlue: hsl(234, 11%, 52%);
+
+
+// ### Light Theme
+$veryLightGray: hsl(0, 0%, 98%);
+$veryLightGrayishBlue: hsl(236, 33%, 92%);
+
+// ### Dark Theme
+$veryDarkBlue: hsl(235, 21%, 11%);
+$veryDarkDesaturatedBlue: hsl(235, 24%, 19%);

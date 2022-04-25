@@ -1,0 +1,22 @@
+// - Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $veryDarkGrayishBlue;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: sans-serif;
+}
+p{
+    // - Weights: 400, 700
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.b{
+    border: 1px solid black;
+}
